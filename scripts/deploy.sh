@@ -28,7 +28,7 @@ else
 fi
 
 echo "> application.jar 교체"
-IDLE_APPLICATION=$IDLE_PROFILE-LeeSeungHeon.jar
+IDLE_APPLICATION=$IDLE_PROFILE-ASAP-Server-Lab.jar
 IDLE_APPLICATION_PATH=$DEPLOY_PATH$IDLE_APPLICATION
 
 ln -Tfs $DEPLOY_PATH$JAR_NAME $IDLE_APPLICATION_PATH
@@ -43,7 +43,7 @@ else
   echo "> kill -15 $IDLE_PID"
   kill -15 $IDLE_PID
   sleep 5
-fi
+fif
 
 echo "> $IDLE_PROFILE 배포"
 nohup java -jar -Duser.timezone=Asia/Seoul -Dspring.profiles.active=$IDLE_PROFILE $IDLE_APPLICATION_PATH >> /home/ubuntu/app/nohup.out 2>&1 &
