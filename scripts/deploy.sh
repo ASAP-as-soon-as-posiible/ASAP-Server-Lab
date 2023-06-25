@@ -43,7 +43,7 @@ else
   echo "> kill -15 $IDLE_PID"
   kill -15 $IDLE_PID
   sleep 5
-fif
+fi
 
 echo "> $IDLE_PROFILE 배포"
 nohup java -jar -Duser.timezone=Asia/Seoul -Dspring.profiles.active=$IDLE_PROFILE $IDLE_APPLICATION_PATH >> /home/ubuntu/app/nohup.out 2>&1 &
